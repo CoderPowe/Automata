@@ -1,0 +1,10 @@
+0 -> Rejected
+010 -> Accepted
+0110 -> Rejected
+001 -> Rejected
+01010 -> Accepted
+0101 -> Accepted
+1010 -> Accepted
+10100 -> Rejected
+10101010 -> Accepted
+101010010 -> Rejected

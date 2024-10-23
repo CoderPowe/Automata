@@ -8,9 +8,9 @@ class Machine:
         self.finalStates = finalStates
     def test(self, input):
         currentState = self.startState
-        for a in input:
+        for char in input:
             row = self.table[self.states.index(currentState)] 
-            nextState = row[self.alphabets.index(a)+1]
+            nextState = row[self.alphabets.index(char)+1]
             currentState = nextState
         return (currentState in self.finalStates)
 if __name__ == "__main__":
@@ -30,6 +30,10 @@ if __name__ == "__main__":
         machine = Machine(states, alphabets, data, finalStates)
         with open("input.txt", "r") as f:
             inputs = f.readlines()
+        outputs = []
         for input in inputs:
             mes = "Accepted" if machine.test(input[:len(input)-1]) else "Rejected"
-            print(f"{input[:len(input)-1]} -> {mes}")
+            outputs.append(f"{input[:len(input)-1]} -> {mes}")
+        with open("output.txt", "w") as f:
+            for output in outputs:
+                f.write(output+"\n")

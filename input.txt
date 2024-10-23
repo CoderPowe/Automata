@@ -1,6 +1,10 @@
-abbc
-abbbbcabc
-abcc
-aababc
-aaabc
-aabbcc
+0
+010
+0110
+001
+01010
+0101
+1010
+10100
+10101010
+101010010
